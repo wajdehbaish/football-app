@@ -1,0 +1,23 @@
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url(./img/stadium.jpg) no-repeat center center/cover;
+  overflow-y: scroll;
+  max-height:100vh; 
+  
+}
+.matches-container {
+  width: 30vw;
+  min-width: 400px;
+  background: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: black 0 0 0.2rem 0.05rem;
+}
+

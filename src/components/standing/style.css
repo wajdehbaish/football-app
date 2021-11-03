@@ -1,0 +1,25 @@
+.league-table{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.standings-container{
+    padding: 1rem;
+}
+.league-table table, td, th {  
+    border: 1px solid black;
+    text-align: left;
+  }
+  
+.league-table table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+.league-table th, td {
+    padding: 15px;
+    font-weight: bold;
+  }

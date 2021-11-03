@@ -1,0 +1,32 @@
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.league-select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+  
+}
+
+.match-container{
+background: url("https://th.bing.com/th/id/OIP.V6Ex--UKGvIrBoVFbMI0zwHaEo?w=279&h=180&c=7&r=0&o=5&pid=1.7");
+
+    width: 30vw;
+    min-width: 400px;
+    background: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: black 0 0 0.2rem .05rem;
+}
