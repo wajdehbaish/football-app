@@ -1,11 +1,12 @@
 .game-container {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  grid-template-rows: repeat(1,1fr);
   background: url(./img/stadium.jpg) no-repeat center center/cover;
   overflow-y: scroll;
-  max-height:100vh; 
+  height:100vh; 
+ 
   
 }
 .matches-container {
