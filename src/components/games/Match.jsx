@@ -11,7 +11,7 @@ export default function Match({ game }) {
     console.log("userr", gamblerId);
     //check if user already gambled
     const response = await axios.get(
-      "http://localhost:4000/api/matches/match/" + game.key
+      "https://footballback-end.herokuapp.com/api/matches/match/" + game.key
     );
     let match = response.data;
     const arr = match.gamblingUsers.filter((user) => user == gamblerId);
@@ -31,7 +31,7 @@ export default function Match({ game }) {
     } else match.draw += 1;
     console.log(match._id);
     const updatedMatch = await axios.put(
-      "http://localhost:4000/api/matches/updateMatch/" + match._id,
+      "https://footballback-end.herokuapp.com/api/matches/updateMatch/" + match._id,
       {
         match: match,
       }

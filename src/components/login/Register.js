@@ -10,7 +10,7 @@ const history=useHistory()
 const handelSubmit= async (e)=>{
     e.preventDefault()
     try{
-    const response=await axios.post('http://localhost:4000/Register',{...input})
+    const response=await axios.post('https://footballback-end.herokuapp.com/Register',{...input})
     history.push('/Login')
     } catch(error){
         console.log(error);

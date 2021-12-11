@@ -18,7 +18,7 @@ import axios from 'axios';
 import Login from './components/login/Login';
 
 const hightlightsApi="https://www.scorebat.com/video-api/v3/"
-const gamesApi= "http://localhost:4000/api/matches"
+const gamesApi= "https://footballback-end.herokuapp.com/api/matches"
 
 
 function App() {
