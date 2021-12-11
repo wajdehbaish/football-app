@@ -1,18 +1,20 @@
+import axios from "axios";
 import React from "react";
+import { matchPath } from "react-router";
+import Match from "./Match";
 import './style.css'
 const Games=({games})=>{
+
+
+console.log(games);
+
+
     return(
         <div className='game-container' >
             {games?games.map((game)=>{
                 return(
-                    <div className='matches-container' key={new Date()}>                     
-                        {game.homeTeam.name + " VS " + game.awayTeam.name}
-                        <p>{game.competition.name}</p>
-                        <p>Round: {game.matchday}</p>
-                         <input disabled type='datetime-local' value={game.utcDate.substring(0,game.utcDate.length-1)}/> 
-                        
-                    </div>
-                )
+                <Match game={game} />        
+                       )
             }):''}
         </div>
     )

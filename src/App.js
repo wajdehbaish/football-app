@@ -4,6 +4,7 @@ import Videos from './components/vidoes/index';
 import Games from './components/games/index';
 import Home from './components/home/index'
 import Standing from './components/standing/index'
+import Register from './components/login/Register';
 
 
 
@@ -14,17 +15,20 @@ import {
   Link
 } from "react-router-dom";
 import axios from 'axios';
+import Login from './components/login/Login';
 
 const hightlightsApi="https://www.scorebat.com/video-api/v3/"
-const gamesApi= "https://api.football-data.org/v2/matches"
+const gamesApi= "http://localhost:4000/api/matches"
+
 
 function App() {
   const [soccerVideos,setSoccerVidoes]=React.useState([]);
   const [games,setGames]=React.useState([]);
 const getTodayGames=async()=>{
  const todayGames = await axios.get(gamesApi,{headers:{"X-Auth-Token":"ace2a2eb816644f0bb21233fb8ae3d3e"}})
- setGames(todayGames.data.matches)
-console.log("today-games",todayGames.data.matches);
+ console.log("gamesfortofay",todayGames);
+ setGames(todayGames.data)
+
 }
  
 const getVidoes=async()=>{
@@ -53,6 +57,10 @@ getVidoes();
             <Link className='link' to="/hightlights">Highlights</Link>
         
             <Link className='link' to="/Games">MatchDay</Link>
+       
+            
+
+            <Link className='link' to="/Login">Login</Link>
         
       </nav>
 
@@ -71,6 +79,15 @@ getVidoes();
         </Route>
         <Route path="/Standing">
           <Standing />
+          
+        </Route>
+        
+        <Route path="/Login">
+          <Login />
+          
+        </Route>
+        <Route path="/Register">
+          <Register />
           
         </Route>
       </Switch>
