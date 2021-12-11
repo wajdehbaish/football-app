@@ -42,9 +42,9 @@ export default function Match({ game }) {
 
     const results = match.firstTeam + match.draw + match.secondTeam;
     console.log(match.firstTeam, results);
-    setResOfFirst(((match.firstTeam / results) * 100).toFixed(3)+"%");
-    setResOfDraw(((match.draw / results) * 100).toFixed(3)+"%");
-    setResOfSecond(((match.secondTeam / results) * 100).toFixed(3)+"%");
+    setResOfFirst(((match.firstTeam / results) * 100).toFixed(0)+"%");
+    setResOfDraw(((match.draw / results) * 100).toFixed(0)+"%");
+    setResOfSecond(((match.secondTeam / results) * 100).toFixed(0)+"%");
   };
 
   return (
