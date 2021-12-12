@@ -3,6 +3,7 @@ import React from "react";
 import { useState } from "react";
 import './style.css'
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 export default function Login() {
   const [input, setInput] = useState({ username: "", password: "" });
 const history=useHistory()
@@ -62,7 +63,7 @@ const handelSubmit= async (e)=>{
       </div>
       <div class="container signin">
         <p>
-          Already have an account? <a href="#">Sign in</a>.
+          you dont have an account? <Link to="/Register">sign up</Link>
         </p>
       </div>
     </form>
